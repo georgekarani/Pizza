@@ -77,18 +77,18 @@ function sumCrust(e, runningTotal, preview) {
         }
 
         if (selectedCrust === "Cheese Stuffed") {
-            crustTotal = 3;
+            crustTotal = 50;
         } else crustTotal = 0;
     }
     
     runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
-    console.log('Crust Total: $' + crustTotal + '.00')
+    console.log('Crust Total: ksh' + crustTotal + '.00')
     
     document.getElementById('grandCrust').innerHTML = selectedCrust+" Crust";
     document.getElementById('totalCrust').innerHTML = crustTotal + ".00";
 
-    console.log('Running Total: $'+runningTotal+'.00');
-    document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+    console.log('Running Total: ks'+runningTotal+'.00');
+    document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
     
 };
 
@@ -122,13 +122,13 @@ function sumSauce(e, runningTotal, preview) {
         document.getElementById('grandSauce').innerHTML = selectedSauce;
         document.getElementById('totalSauce').innerHTML = sauceTotal + ".00";
         
-        document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+        document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
         
     }
-    console.log('Sauce Total: $' + sauceTotal + '.00');
+    console.log('Sauce Total: ksh' + sauceTotal + '.00');
     runningTotal=sizeTotal+crustTotal+sauceTotal;
-    console.log('Running Total: $'+runningTotal+'.00');
-    document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+    console.log('Running Total: ksh'+runningTotal+'.00');
+    document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
 }
 
 
@@ -158,19 +158,19 @@ function sumCheese(e, runningTotal, preview) {
         }
 
         if (selectedCheese === "Extra Cheese") {
-            cheeseTotal = 3;
+            cheeseTotal = 30;
         } else cheeseTotal = 0;
 
         runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
     }
 
-    console.log('Cheese Total: $' + cheeseTotal + '.00')
+    console.log('Cheese Total: ksh' + cheeseTotal + '.00')
     
     document.getElementById('grandCheese').innerHTML = selectedCheese;
     document.getElementById('totalCheese').innerHTML = cheeseTotal + ".00";
 
-    console.log('Running Total: $'+runningTotal+'.00');
-    document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+    console.log('Running Total: ksh'+runningTotal+'.00');
+    document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
 }
 
 
@@ -181,8 +181,8 @@ var previewProtein = document.querySelectorAll('input[name="protein"]');
 
 // ---------- Display protein in preview when the 'click' event happens
     
-for (b = 0; b < previewProtein.length; b++) {
-    previewProtein[b].addEventListener('click', sumProtein);
+for (b = 0; b < previewMeat.length; b++) {
+    previewMeat[b].addEventListener('click', sumMeat);
 }
 
     
@@ -190,53 +190,53 @@ function sumProtein(e, runningTotal, preview) {
 
     // ---------- create new array to put in checked protein & display selection in console
 
-    var selectedProtein = []
+    var selectedMeat = []
 
     for (var b = 0; b < previewProtein.length; b++) {
-        if (previewProtein[b].checked) {
-            selectedProtein.push(previewProtein[b].value);
+        if (previewMeat[b].checked) {
+            selectedMeat.push(previewProtein[b].value);
 
-            console.log("Seleted Protein: " + previewProtein[b].value);
+            console.log("Seleted Meat: " + previewProtein[b].value);
         }
     }
     
-    // ---------- since protein is $1 each, use length of protein selection to calculate, using -1 for 1 free topping if selection is > 1
+    // ---------- since protein is 20 length of protein selection to calculate, using -1 for 1 free topping if selection is > 1
 
-    var proteinCount = selectedProtein.length;
-    if (proteinCount > 1) {
-        proteinTotal = (proteinCount - 1);
-        for (var b = 1; b < selectedProtein.length; b++) {
-            selectedProtein[b] = "<br>" + selectedProtein[b];
+    var meatCount = selectedMeat.length;
+    if (meatCount > 10) {
+        meatTotal = (proteinCount - 10);
+        for (var b = 10; b < selectedMeat.length; b++) {
+            selectedMeat[b] = "<br>" + selectedMeat[b];
         }
     } 
     else {
-        proteinTotal = 0;
+        meatTotal = 0;
     }
     
-    runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
+    runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+meatTotal+vegTotal;
 
-    console.log("Total Protein Selected: " + proteinCount);
+    console.log("Total meat Selected: " + proteinCount);
 
-    console.log(proteinCount + " protein selected (1 protein free) = " + "$" + proteinTotal + ".00)");
+    console.log(proteinCount + " meat selected (1 protein free) = " + "ksh" + meatTotal + ".00)");
 
     // display selected protein in previewProtein div when checkbox is/are clicked
 
-    document.getElementById('previewProtein').innerHTML =selectedProtein + "<br>";
+    document.getElementById('previewMeat').innerHTML =selectedProtein + "<br>";
 
     // display selected protein in receipt modal
 
-    document.getElementById('grandProtein').innerHTML = selectedProtein + "<br>";
-    document.getElementById('totalProtein').innerHTML= proteinTotal+".00";
+    document.getElementById('grandMeat').innerHTML = selectedProtein + "<br>";
+    document.getElementById('totalMeat').innerHTML= proteinTotal+".00";
 
-    console.log('Running Total: $'+runningTotal+'.00');
-    document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+    console.log('Running Total: ksh'+runningTotal+'.00');
+    document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
 
 }
 
 
 
 
-// ---------- Pizza Veg
+// ---------- Pizza Veg-----
 
 var previewVeg = document.querySelectorAll('input[name="veg"]');
     
@@ -274,19 +274,19 @@ function sumVeg(e, runningTotal, preview) {
 
         console.log("totalVegselect" + vegCount);
 
-        console.log(vegCount + " veg selected (1 free veg) = " + "$" + vegTotal + ".00)");
+        console.log(vegCount + " veg selected (1 free veg) = " + "ksh" + vegTotal + ".00)");
 
-        // display selected veg in previewProtein div when checkbox is/are clicked
+        // display selected veg in previewProtein div when checkbox are clicked
 
         document.getElementById('previewVeg').innerHTML = selectedVeg + "<br>";
 
-        // display selected protein in receipt modal
+        // display selected protein in receipt modal.//not there iniatially
 
         document.getElementById('grandVeg').innerHTML= selectedVeg + "<br>";
         document.getElementById('totalVeg').innerHTML=vegTotal+".00";
 
-        console.log('Running Total: $'+runningTotal+'.00');
-        document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+        console.log('Running Total: ksh'+runningTotal+'.00');
+        document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
 };
 
 
