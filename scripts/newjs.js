@@ -39,7 +39,7 @@ function sumSize(e) {
             sizeTotal = 16;
         }
 
-        console.log('Size Total: $'+sizeTotal+'.00')
+        console.log('Size Total: ksh'+sizeTotal+'.00')
     
         runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
     }
@@ -47,8 +47,8 @@ function sumSize(e) {
     document.getElementById('grandSize').innerHTML = selectedSize;
     document.getElementById('totalSize').innerHTML = sizeTotal + ".00";
 
-    console.log('Running Total: $'+runningTotal+'.00');
-    document.getElementById('grandTotal').innerHTML='<strong>'+'$ '+runningTotal+".00"+'</strong>';
+    console.log('Running Total: ksh'+runningTotal+'.00');
+    document.getElementById('grandTotal').innerHTML='<strong>'+'ksh '+runningTotal+".00"+'</strong>';
 }
 
 
