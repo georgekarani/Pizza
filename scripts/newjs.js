@@ -29,7 +29,7 @@ function sumSize(e) {
             var selectedSize = previewSize[x].value;
         }
 
-        if (selectedSize === "Personal") {
+        if (selectedSize === "Small") {
             sizeTotal = 6;
         } else if (selectedSize === "Medium") {
             sizeTotal = 10;
