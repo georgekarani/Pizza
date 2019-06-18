@@ -20,7 +20,7 @@ Mamma-mia-pizza is a design website that offers a range of services of ordering 
 * Stable internet connection
 
 ### SETUP(installation)
-* git clone https://github.com/georgekarani/Mammamia-pizza.git
+* git clone https://github.com/georgekarani/pizza.git
 * cd delani-studio
 * Open index.html on any browser
 
@@ -33,14 +33,14 @@ Mamma-mia-pizza is a design website that offers a range of services of ordering 
 
 * Order Pizza of your liking from size , meat, crust, sauce, cheese and veggies.
 
-* Click on place order (green button) to order or cancel order with cancel(red)
+* Click on place order  to order or cancel order.
 
-* 
+* For delivery purposes input your details.
 
 ### Live to Link Delani studio to the Website:
-* [MAMMA-MIA Live Link](https://georgekarani.github.io/Mammamia-pizza/)
+* [MAMMA-MIA Live Link](https://georgekarani.github.io/pizza/)
 
-* [Git hub link](https://github.com/georgekarani/Mammamia-pizza.git)
+* [Git hub link](https://github.com/georgekarani/pizza.git)
 
 
 ### Contact information
