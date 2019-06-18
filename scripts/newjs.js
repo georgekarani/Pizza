@@ -3,7 +3,7 @@ var sizeTotal = 0;
 var crustTotal = 0;
 var sauceTotal = 0;
 var cheeseTotal = 0;
-var proteinTotal = 0;
+var meatTotal = 0;
 var vegTotal = 0;
 
 
