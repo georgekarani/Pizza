@@ -41,10 +41,10 @@
         <div class="gen">
             <h3><u>Base Pizza</u></h3>
             <ul class="rules">
-                <li>Personal<span class="price">&#36 6.00</span></li>
-                <li>Medium<span class="price">&#36 10.00</span></li>
-                <li>Large<span class="price">&#36 14.00</span></li>
-                <li>Extra Large<span class="price">&#36 16.00</span></li>
+                <li>Small<span class="price">&#36 200.00</span></li>
+                <li>Medium<span class="price">&#36 500.00</span></li>
+                <li>Large<span class="price">&#36 800.00</span></li>
+                <li>Extra Large<span class="price">&#36 1000.00</span></li>
                 <h5><em>* Complimentary:<br> 1 protein &amp 1 veggie</em></h5>
             </ul>
         </div>
@@ -52,19 +52,18 @@
         <div class="add">
             <h3><u>Add-ons</u></h3>
             <ul class="rules">
-                <li>Protein<span class="price">+ &#36 1.00/ea</span></li>
-                <li>Veggie<span class="price">+ &#36 1.00/ea</span></li>
+                <li>Protein<span class="price">+ &#36 50.00/ea</span></li>
+                <li>Veggie<span class="price">+ &#36 15.00/ea</span></li>
                 <br>
-                <li>Extra Cheese<span class="price">+ &#36 3.00</span></li>
+                <li>Extra Cheese<span class="price">+ &#36 50.00</span></li>
                 <br>
-                <li>Cheese Stuffed Crust<span class="price">+ &#36 3.00</span></li>
+                <li>Cheese Stuffed Crust<span class="price">+ &#36 80.00</span></li>
             </ul>
         </div>
 
         <div class="size orderRadios" id="sizeOption">
             <h3><u>Pick a Size</u></h3>
-            <input type="radio" name="size" value="Personal"> Personal
-                <br><br>
+            <input type="radio" name="size" value="Personal"> Small                <br><br>
             <input type="radio" name="size" value="Medium"> Medium
                     <br><br>
             <input type="radio" name="size" value="Large"> Large
@@ -86,7 +85,7 @@
         </div>
 
         <div class="sauce orderRadios">
-            <h3><u>Fancy a Sauce?</u></h3>
+            <h3><u>Sauce?</u></h3>
             <input type="radio" name="sauce" value="Marinara"> Marinara
                 <br><br>
             <input type="radio" name="sauce" value="White"> White
@@ -97,7 +96,7 @@
         </div>
 
         <div class="cheese orderRadios">
-            <h3><u>Say Cheese!</u></h3>
+            <h3><u>Cheese!</u></h3>
             <input type="radio" name="cheese" value="Regular Cheese"> Regular Cheese
                 <br><br>
             <input type="radio" name="cheese" value="No Cheese"> No Cheese
@@ -107,7 +106,7 @@
         </div> 
 
         <div class="protein orderCheckbox">
-            <h3><u>Savory Proteins</u></h3>
+            <h3><u>Meat</u></h3>
             <input type="checkbox" name="protein" value="Pepperoni"> Pepperoni
                 <br><br>
             <input type="checkbox" name="protein" value="Sausage"> Sausage
@@ -122,7 +121,7 @@
         </div>
 
         <div class="veg orderCheckbox">
-            <h3><u>Yummy Veggies</u></h3>
+            <h3><u>Veggies</u></h3>
             <input type="checkbox" name="veg" value="Tomatoes"> Tomatoes
                 <br><br>
             <input type="checkbox" name="veg" value="Onions"> Onions
@@ -172,7 +171,7 @@
                 <h2>Thank you!<br> Here's Your Receipt</h2>
             </div>
             <div class="modal-body">
-                <p><strong>You've ordered:</strong></p>
+                <p><strong>You have ordered:</strong></p>
 
                 <table>
                     <tr>
@@ -192,8 +191,8 @@
                         <td class="orderTotal" id="totalCheese"></td>
                     </tr>
                     <tr>
-                        <td class="orderList" id="grandProtein"></td>
-                        <td class="orderTotal" id="totalProtein"></td>
+                        <td class="orderList" id="grandMeat"></td>
+                        <td class="orderTotal" id="totalMeat"></td>
                     </tr>
                     <tr>
                         <td class="orderList" id="grandVeg"></td>
@@ -208,11 +207,11 @@
 
                 </table>
 
-                <p><strong>See you in about 30 minutes!</strong></p>
+                <p><strong>See you in about 15 minutes!</strong></p>
             </div>
 
             <div class="modal-footer">
-                <h3>Email receipt &amp track my pizza.</h3>
+                <h3>Delivery</h3>
                 <input type="email" name="email" placeholder="your email">
                 <input type="submit" value="Submit">
                 <br><br>
