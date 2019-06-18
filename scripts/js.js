@@ -1,77 +1,7 @@
-/* $(document).ready(function(){
-    $('.size').click(function(){
-        var resultSize = $('input[type="radio"]:checked');
-        if (resultSize.length>0) {
-            $('#finalSize').html("Size: " + resultSize.val());
-        }
-        else {
-            $('#summary').html("")
-        }
-    });
-});
-
- $(document).ready(function(){
-    $('.crust').click(function(){
-        var resultCrust = $('input[type="radio"]:checked');
-        if (resultCrust.length>0) {
-            $('#crust').html("Crust: " + resultCrust.val());
-        }
-        else {
-            $('#summary').html("")
-        }
-    });
-});
-*/
-
-// Order Preview before clicking "Order It"
+//js function from first pizza application mammiam on git hub//
 
 var orderSummary = "";
-/*
-var orderSize = document.getElementsByName('size');
 
-
-for (var i=0; i < orderSize.length; i++) {
-    orderSize[i].onclick = function (){
-        document.getElementById('preview').innerHTML= orderSummary + "Size: " +(this.value)+ "<br>";
-    };
-};
-
-var orderCrust = document.getElementsByName ('crust');
-
-for (var j=0; j < orderCrust.length; j++) {
-    orderCrust[j].onclick = function (){
-        document.getElementById('preview').innerHTML += orderSummary + "Crust: " +(this.value) + "<br>";
-    };
-};
-
-var orderSauce = document.getElementsByName ('sauce');
-
-for (var k=0; k < orderSauce.length; k++) {
-    orderSauce[k].onclick = function (){
-        document.getElementById('preview').innerHTML += orderSummary + "Sauce: " +(this.value) + "<br>";
-    };
-};
-
-var orderCheese = document.getElementsByName ('cheese');
-
-for (var l=0; l < orderCheese.length; l++) {
-    orderCheese[l].onclick = function (){
-        document.getElementById('preview').innerHTML += orderSummary + "Cheese: " +(this.value) + "<br>";
-    };
-};
-
-var orderProtein = document.getElementsByName ('protein');
-
-for (var m=0; m < orderProtein.length; m++) {
-    orderProtein[m].onclick = function (){
-        document.getElementById('preview').innerHTML += orderSummary + "<li>"+(this.value)+ "</li>"+ "<br>";
-    };
-};
-*/
-
-
-
-//test
 
 
 var grandOrder = document.getElementById('preview').value;
@@ -169,17 +99,7 @@ function sumCheese(e, runningTotal, grandOrder){
     console.log('$' + runningTotal + '.00');
 };
 
-/*
-Function sumProtein(e, runningTotal, grandOrder){
-    console.log(e.target.value);
-    document.getElementById('previewProtein').innerHTML=e.target.value;
-}
 
-function sumVeg(e, runningTotal, grandOrder){
-    console.log(e.target.value);
-    document.getElementById('previewVeg').innerHTML=e.target.value;
-}
-*/
 
 
 var previewProtein = document.querySelectorAll('input[name="protein"]');
@@ -259,8 +179,7 @@ function sumVeg(e,runningTotal,grandOrder) {
 
     console.log("Purchase Total: "+ runningTotal+".00");
 
-    // document.getElementById("grandOrder").innerHTML=grandOrder; 
-    // document.getElementById('grandTotal')=runningtotal + ".00";
+   
 };
 
 
@@ -298,20 +217,6 @@ function closeModal() {
     modal.style.display = "none";
 };
 
-/*
-// listen for outside click
-//window.addEventListener('click', outsideClick);
-
-// function to close modal if outside window clicked
-function outsideClick(e) {
-    if(e.target== modal) {
-        modal.style.display = "none";
-    };
-};
-*/
-
-
-// When "Cancel It" button is clicked, form is reset
 
 var cancelButton = document.getElementById ('cancel');
 
