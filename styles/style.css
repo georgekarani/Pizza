@@ -272,17 +272,7 @@ tr.last {
 --------------------------------------------- */
 footer{
   padding-top: 40px;
-}
-footer img{
-  border-radius: 50%;
-  transition: 0.2s ease-out;
-}
-footer img:hover{
-  transform: scale(0.8);
-  padding: 3px;
-  margin: -3px;
-  background: orange;
-  box-shadow: 0 0 20px orange);
+  background: url("../images/pizza_pattern.png");
 }
 
 
