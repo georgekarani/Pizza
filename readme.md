@@ -40,7 +40,7 @@ Mamma-mia-pizza is a design website that offers a range of services of ordering 
 ### Live to Link Delani studio to the Website:
 * [MAMMA-MIA Live Link](https://georgekarani.github.io/pizza/)
 
-* [Git hub link](https://github.com/georgekarani/pizza.git)
+* [Git hub link](https://github.com/georgekarani/Pizza)
 
 
 ### Contact information
