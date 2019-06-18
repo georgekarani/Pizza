@@ -77,7 +77,7 @@ function sumCrust(e, runningTotal, preview) {
         }
 
         if (selectedCrust === "Cheese Stuffed") {
-            crustTotal = 3;
+            crustTotal = 30;
         } else crustTotal = 0;
     }
     
@@ -158,7 +158,7 @@ function sumCheese(e, runningTotal, preview) {
         }
 
         if (selectedCheese === "Extra Cheese") {
-            cheeseTotal = 3;
+            cheeseTotal = 30;
         } else cheeseTotal = 0;
 
         runningTotal = sizeTotal+crustTotal+sauceTotal+cheeseTotal+proteinTotal+vegTotal;
@@ -203,9 +203,9 @@ function sumProtein(e, runningTotal, preview) {
     // ---------- since protein is $1 each, use length of protein selection to calculate, using -1 for 1 free topping if selection is > 1
 
     var proteinCount = selectedProtein.length;
-    if (proteinCount > 1) {
-        proteinTotal = (proteinCount - 1);
-        for (var b = 1; b < selectedProtein.length; b++) {
+    if (proteinCount > 50) {
+        proteinTotal = (proteinCount - 51);
+        for (var b = 50; b < selectedProtein.length; b++) {
             selectedProtein[b] = "<br>" + selectedProtein[b];
         }
     } 
@@ -261,9 +261,9 @@ function sumVeg(e, runningTotal, preview) {
     // ---------- since veg is $1 each, use length of veg selection to calculate, using -1 for 1 free topping if selection is > 1
 
     var vegCount = selectedVeg.length;
-        if (vegCount > 1) {
-            vegTotal = (vegCount - 1);
-            for (var c = 1; c < selectedVeg.length; c++) {
+        if (vegCount > 10) {
+            vegTotal = (vegCount - 10);
+            for (var c = 10; c < selectedVeg.length; c++) {
                 selectedVeg[c] = "<br>" + selectedVeg[c];
             }
         } 
